@@ -1,0 +1,58 @@
+{
+  "name": "express-microservice-boilerplate",
+  "version": "1.0.0",
+  "description": "An express-based bootstrapping module for building microservices with Node JS.",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm run server",
+    "server": "node build/src/server.js",
+    "watch-node": "nodemon build/src/server.js",
+    "build": "npm run gulp-tslint & npm run gulp-build",
+    "gulp-build": "gulp build",
+    "gulp-watch": "gulp watch",
+    "gulp-tslint": "gulp tslint",
+    "dev": "npm run gulp-build && npm run watch",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run gulp-watch\" \"npm run watch-node\"",
+    "clean-build": "echo \"Cleaning build/** folder\" & gulp clean:build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run gulp-tslint",
+      "pre-push": "npm run gulp-tslint"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.rksv.net:backend/pro/express-microservice-boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^12.0.8",
+    "app-root-path": "^2.2.1",
+    "body-parser": "^1.19.0",
+    "cli-table": "^0.3.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-http-context": "^1.2.3",
+    "express-list-endpoints": "^4.0.1",
+    "express-winston": "^3.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "newrelic": "^5.10.0",
+    "node-uuid": "^1.4.8",
+    "tyboost": "^2.0.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "del": "^4.1.1",
+    "gulp": "^4.0.2",
+    "gulp-tslint": "^8.1.4",
+    "gulp-typescript": "^5.0.1",
+    "husky": "^2.3.0",
+    "nodemon": "^1.19.1",
+    "tslint": "^5.17.0",
+    "typescript": "^3.5.1"
+  }
+}

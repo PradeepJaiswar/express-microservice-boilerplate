@@ -1,0 +1,48 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Build directories
+dist/
+build/
+output/
+
+# Optional npm cache directory
+.npm
+.cache
+
+# Output of 'npm pack'
+*.tgz
+
+# Dotenv environment variables file
+.env
+.env.test
+
+# Sublime editor files
+*.sublime-workspace
+*.sublime-project
+
+# Jetbrains editor files
+.idea
+
+# Vscode editor files
+.vscode
+
+# TypeScript declaration files
+typings/
+
+# Other
+.DS_Store
+.DS_Store?
+._*
+*.swp
+*~
+.project
+.nvm-version
+.settings
+thumbs.db
+Thumbs.db
