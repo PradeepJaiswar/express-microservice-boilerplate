@@ -25,10 +25,6 @@ You will need the following things properly installed on your computer.
 * `npm run dev`
 Visit [http://localhost:8080/](http://localhost:8080/)
 
-## Test
-
-`npm test`
-
 ## Build
 
 `npm run build`
@@ -78,3 +74,56 @@ Build `docker-compose -f docker-compose.prod.yml build`
 Run `docker-compose -f docker-compose.prod.yml up -d`
 
 Build & Run `docker-compose -f docker-compose.prod.yml up --build -d`
+
+
+#### FOLDER STRUCTURE
+
+```
+config
+└───prod
+│   prod_config
+└───test
+│   test_config
+└───uat
+│   uat_config
+deployment
+locales
+│   english-us
+logger
+│   winston-logger-setup  
+src
+└───boot
+│   └───initializers
+│         initializer-1
+│         initializer-2
+│         ...
+│   boot-file
+└───controllers
+│     controller-1
+│     controller-2
+│     ...
+└───middlewares
+│     middleware-1
+│     middleware-2
+│     ...
+└───models
+│     model-1
+│     model-2
+│     ...
+└───routes
+│     route-1
+│     route-2
+│     ...
+└───services
+│     service-1
+│     service-2
+│     ...
+└───utils
+│     util-1
+│     util-2
+│     ...
+└───tests
+│     test-1
+│     test-2
+│     ...
+```
