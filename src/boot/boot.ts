@@ -4,7 +4,6 @@ import * as bodyParser from "body-parser";
 import * as cors from "cors";
 import * as listEndpoints from "express-list-endpoints";
 import * as Table from "cli-table";
-import * as httpContext from "express-http-context";
 
 import allRouter from "../routes";
 import allInitializer from "./initializers";
@@ -19,9 +18,6 @@ const app = tyboost(express());
 const registerCoreMiddlewares = function (): void {
     try {
         logger.info(`BOOT :: Registering core middlewares started`);
-
-        app.use(httpContext.middleware);
-        logger.info(`BOOT :: Registered middlewar : httpContext`);
 
         app.use(bodyParser.json());
         app.use(bodyParser.urlencoded({ extended: true }));
