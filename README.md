@@ -23,12 +23,21 @@ You will need the following things properly installed on your computer.
 ## Running / Development
 
 * `npm run dev`
-Visit [http://localhost:8080/](http://localhost:8080/)
+
+Boilerplate comes with below two in build routes 
+
+Default - Default for demo  
+Visit [http://localhost:8080/v1/default](http://localhost:8080/v1/default)
+
+Health check - Can be used for adding a service health check logic  
+Visit [http://localhost:8080/v1/default](http://localhost:8080/v1/default)
+
 
 ## Build
 
 `npm run build`
 
+Uses Gulp [Gulp](https://gulpjs.com/) for TypeScript build
 
 ## Docker
 #### Prerequisite: Install docker
