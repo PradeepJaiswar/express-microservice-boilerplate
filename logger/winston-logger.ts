@@ -1,7 +1,6 @@
 import * as winston from "winston";
 import * as path from "path";
 import * as appRoot from  "app-root-path";
-import * as httpContext from "express-http-context";
 
 const logLevelRegex = /silly|debug|verbose|info|warn|error/;
 const fillExcept = ["message", "level"];
@@ -34,20 +33,11 @@ const setLogConfig =  (config, callback) => {
     }
 };
 
-const getUUId = () => {
-    try {
-        const reqId = httpContext.get("reqId");
-        return reqId ? ` - ${reqId}` : "";
-    } catch (err) {
-        return "";
-    }
-};
 
 const formatter = info => {
-    const uuid = getUUId();
     const t = new Date();
     const time =  t.toLocaleString() + "," + t.getMilliseconds();
-    let out = `[${info.level.toUpperCase()}] - ${time}${uuid} - ${info.message}`;
+    let out = `[${info.level.toUpperCase()}] - ${time} - ${info.message}`;
     if (info.metadata.error) {
         out = out + " " + info.metadata.error;
         if (info.metadata.error.stack) {

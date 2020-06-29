@@ -35,7 +35,6 @@
     "cli-table": "^0.3.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "express-http-context": "^1.2.3",
     "express-list-endpoints": "^4.0.1",
     "express-winston": "^3.2.0",
     "jsonwebtoken": "^8.5.1",
