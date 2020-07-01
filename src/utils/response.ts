@@ -1,31 +1,54 @@
-/* tslint:disable no-null-keyword */
-
 /**
  * For  response structure
- * Change as per the application need
+ * We have add general response format as per our need and it works
+ * Change as per the application, team and company need
+ * // TODO : add json.api implementation for node js specified at https://jsonapi.org/implementations/#server-libraries-node-js
  */
 class Response {
-    public static success(code: number, message: string, optionals?: object) {
+    public static success(data: object, meta?: object): object {
+        const  successResponseObject: object = {};
+
+        // add data
+        successResponseObject["data"] = {
+            ...data
+        };
+        // add meta to response if provided
+        if (meta && typeof meta === "object") {
+            successResponseObject["meta"] = {
+                ...meta
+            };
+        }
+
+        return successResponseObject;
+    }
+
+    public static error(code: number, title: string, detail: string, optionals?: object): object {
         return {
-            success: true,
-            error: null,
-            data: {
+            errors: [{
                 code : code,
-                message : message,
-                ...optionals,
-            },
+                title : title,
+                detail : detail,
+                ...optionals
+            }],
         };
     }
 
-    public static error(code: number, message: string, optionals?: object) {
+    public static errors(errorObject: Array<object>): object {
+        const errorsResponseObject: Array<object> = [];
+
+        if (errorObject && errorObject.length > 0) {
+            errorObject.forEach((obj) => {
+                const errorObj = {
+                    ...obj
+                };
+                errorsResponseObject.push({
+                    ...errorObj
+                });
+            });
+        }
+
         return {
-            success: false,
-            data: null,
-            error: {
-                code : code,
-                message : message,
-                ...optionals
-            },
+            errors : errorsResponseObject
         };
     }
 }
