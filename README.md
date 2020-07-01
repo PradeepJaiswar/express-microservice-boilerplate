@@ -24,7 +24,7 @@ You will need the following things properly installed on your computer.
 
 * `npm run dev`
 
-Boilerplate comes with below two in build routes 
+Boilerplate comes with below in-built routes 
 
 Default - Default for demo  
 Visit [http://localhost:8080/v1/default](http://localhost:8080/v1/default)
@@ -32,6 +32,8 @@ Visit [http://localhost:8080/v1/default](http://localhost:8080/v1/default)
 Health check - Can be used for adding a service health check logic  
 Visit [http://localhost:8080/v1/default](http://localhost:8080/v1/default)
 
+Pug demo -  templating integration https://pugjs.org/api/getting-started.html  
+Visit [http://localhost:8080/v1/pug_demo](http://localhost:8080/v1/pug_demo)
 
 ## Build
 
