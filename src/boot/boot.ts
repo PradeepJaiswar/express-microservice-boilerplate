@@ -4,6 +4,7 @@ import * as bodyParser from "body-parser";
 import * as cors from "cors";
 import * as listEndpoints from "express-list-endpoints";
 import * as Table from "cli-table";
+// const path = require("path");
 
 import allRouter from "../routes";
 import allInitializer from "./initializers";
@@ -15,26 +16,34 @@ logger.info(`BOOT :: Initialising express app with tyboost`);
 const app = tyboost(express());
 
 // register application level middleware
-const registerCoreMiddlewares = function (): void {
+const registerCoreMiddleware = function (): void {
     try {
-        logger.info(`BOOT :: Registering core middlewares started`);
+        logger.info(`BOOT :: Registering core middleware started`);
 
         app.use(bodyParser.json());
         app.use(bodyParser.urlencoded({ extended: true }));
-        logger.info(`BOOT :: Registered middlewar : bodyParser`);
+        logger.info(`BOOT :: Registered middleware : bodyParser`);
 
         app.use(cors());
         app.options("*", cors());
-        logger.info(`BOOT :: Registered middlewar : cors(*)`);
+        logger.info(`BOOT :: Registered middleware : cors(*)`);
+
+        // Enable in case of the pug switch is on
+        if (constant.SWITCHES && constant.SWITCHES.PUG) {
+            // you can change pug views folder path here
+            // app.set("views", path.join(`${__dirname}`, "views"));
+            app.set("view engine", "pug");
+            logger.info(`BOOT :: Registered middleware : pug`);
+        }
 
         if (constant.ENV != constant.environments.prod) {
             app.use(middleware.expressWinston);
-            logger.info(`BOOT :: Registered middlewar : uuiexpressWinstond`);
+            logger.info(`BOOT :: Registered middleware : uuiexpressWinstond`);
         }
 
-        logger.info(`BOOT :: Registering core middlewares done`);
+        logger.info(`BOOT :: Registering core middleware done`);
     } catch (err) {
-        logger.error(`BOOT :: Error while registering core middlewares . Check core middlewares : ${JSON.stringify(err.message)}`);
+        logger.error(`BOOT :: Error while registering core middleware . Check core middleware : ${JSON.stringify(err.message)}`);
     }
 };
 
@@ -80,7 +89,7 @@ const registerInitializers = (initializers: object): void  => {
 
 const handleError  = (): void => {
     process.on("uncaughtException", function (err) {
-        logger.error(`UNCAUGHTEXCEPTION OCCURRED : ${JSON.stringify(err.stack)}`);
+        logger.error(`UNCAUGHT_EXCEPTION OCCURRED : ${JSON.stringify(err.stack)}`);
         process.exit(1);
     });
 };
@@ -89,7 +98,7 @@ const handleError  = (): void => {
 const startApp  = async (): Promise<void> => {
     try {
         // register core application level middleware
-        registerCoreMiddlewares();
+        registerCoreMiddleware();
         // register routes
         registerRoutes(allRouter ? allRouter : {});
         // register all the initializer
