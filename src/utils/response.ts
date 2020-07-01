@@ -48,7 +48,7 @@ class Response {
         }
 
         return {
-            errors : errorsResponseObject
+            errors: errorsResponseObject
         };
     }
 }
