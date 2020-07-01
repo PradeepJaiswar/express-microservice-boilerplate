@@ -52,7 +52,7 @@
             }
         ],
         "no-internal-module": true,
-        "no-trailing-whitespace": true,
+        "no-trailing-whitespace": [true, "ignore-blank-lines", "ignore-comments", "ignore-template-strings", "ignore-jsdoc"],
         "no-null-keyword": true,
         "prefer-const": true,
         "jsdoc-format": true

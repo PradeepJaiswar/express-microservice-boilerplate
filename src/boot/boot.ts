@@ -27,9 +27,6 @@ const registerCoreMiddlewares = function (): void {
         app.options("*", cors());
         logger.info(`BOOT :: Registered middlewar : cors(*)`);
 
-        app.use(middleware.uuidMiddleware);
-        logger.info(`BOOT :: Registered middlewar : uuid`);
-
         if (constant.ENV != constant.environments.prod) {
             app.use(middleware.expressWinston);
             logger.info(`BOOT :: Registered middlewar : uuiexpressWinstond`);
