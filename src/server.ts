@@ -1,5 +1,12 @@
+"use strict";
+
 import startApp from "./boot";
-import  { logger } from "./utils";
+import  { constant, logger } from "./utils";
+
+// Enable of newrelic switch is on
+if (constant.SWITCHES.NEW_RELIC && constant.ENV === constant.environments.prod) {
+  require("newrelic");
+}
 
 (async (): Promise<void> =>  {
     try {
