@@ -11,6 +11,7 @@ const ENV = (process.env.ENV || process.env.NODE_ENV) || environments.test;
 const PORT = process.env.PORT || 8080;
 
 const SWITCHES  = {
+    "NEW_RELIC": false,
     "PUG" : true
 };
 
