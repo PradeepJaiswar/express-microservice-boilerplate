@@ -139,7 +139,7 @@ src
 
 ## Preloaded Component
 
-* Mongo [Mongo](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/mongo) 
+* [Mongo Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/mongo) 
 
 
 ## Comments/issues
