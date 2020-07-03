@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.rksv.net:backend/pro/express-microservice-boilerplate.git"
+    "url": "git@github.com:PradeepJaiswar/express-microservice-boilerplate.git"
   },
   "author": "",
   "license": "ISC",
@@ -38,6 +38,7 @@
     "express-list-endpoints": "^4.0.1",
     "express-winston": "^3.2.0",
     "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.21",
     "newrelic": "^5.10.0",
     "node-uuid": "^1.4.8",
     "pug": "^3.0.0",
