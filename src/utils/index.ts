@@ -5,6 +5,7 @@ import constant from "./constants";
 import  { Response, statusCode } from "./response";
 import Connections from "./connections";
 import jwt from "./jwt-token";
+import mongo from "./mongo";
 
 export  {
     logger,
@@ -15,4 +16,5 @@ export  {
     statusCode,
     Connections,
     jwt,
+    mongo,
 };

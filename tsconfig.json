@@ -23,6 +23,7 @@
     "src/**/*",
     "locales/*",
     "config/**/*",
-    "logger/**/*"
+    "logger/**/*",
+    "mongo/**/*"
 	]
 }
