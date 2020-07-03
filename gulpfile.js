@@ -21,7 +21,7 @@ gulp.task('tslint', () => {
   .pipe(tslint.report())
 });
 
-// task to transpile all typescripts into javascripts in build folder
+// task to transpile all typescripts into javascript in build folder
 gulp.task('build', () => {
  return tsProject.src()
  .pipe(tsProject())
