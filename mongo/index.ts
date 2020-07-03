@@ -7,7 +7,7 @@ const initialize = async (config) => {
         await mongoDriver.initializeDriver();
         return mongoDriver.getMongoInstance();
     } catch (error) {
-        logger.error(`Error connecting to Mongo ${JSON.stringify(error.message)}`);
+        logger.error(`MONGO_CONNECTOR :: Error connecting to Mongo ${JSON.stringify(error.message)}`);
     }
 };
 

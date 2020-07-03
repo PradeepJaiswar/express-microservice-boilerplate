@@ -2,11 +2,6 @@
 
 An express-based bootstrapping module for building microservices with Node JS.
 
-### Repository Practices ###
-
-* Development folllows [git-flow](http://nvie.com/posts/a-successful-git-branching-model/)
-* All development should take advantage of ES6 and ES7
-
 ### Prerequisites ###
 
 You will need the following things properly installed on your computer.
@@ -139,7 +134,11 @@ src
 │     ...
 ```
 
+## Preloaded Component
 
-## COMMENTS/ISSUES:
+* Mongo [Mongo](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/mongo) 
+
+
+## Comments/issues
 
 F-f-fork it, baby.
