@@ -3,7 +3,7 @@
 import startApp from "./boot";
 import  { constant, logger } from "./utils";
 
-// Enable of newrelic switch is on
+// Enable newrelic if switch is on
 if (constant.SWITCHES.NEW_RELIC && constant.ENV === constant.environments.prod) {
   require("newrelic");
 }
