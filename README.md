@@ -1,6 +1,9 @@
 # Express Microservice Boilerplate
 
-An express-based bootstrapping module for building microservices with Node JS.
+An express-based bootstrapping module for building microservices with Node JS. The boilerplate comes with [pre-loaded ready to use components](
+https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master#preloaded-component)     
+
+We have been using this boilerplate for some time on production to run many of our node js microservices.
 
 ### Prerequisites ###
 
