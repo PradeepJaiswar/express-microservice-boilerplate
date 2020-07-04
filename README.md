@@ -139,7 +139,8 @@ src
 
 ## Preloaded Component
 
-* [Mongo Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/mongo) 
+* [Mongo Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/mongo)
+* [Redis Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/redis) 
 
 
 ## Comments/issues

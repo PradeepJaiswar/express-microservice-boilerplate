@@ -43,7 +43,7 @@ Library is customized for microservices use case
     })();
    
 ### Test
-Start your local mongo and build proejct
+Start your local mongo and build project
 
     // go to root of project and run
     npm run build
