@@ -25,6 +25,7 @@
     "config/**/*",
     "logger/**/*",
     "mongo/**/*",
-    "redis/**/*"
+    "redis/**/*",
+    "kafka/**/*"
 	]
 }

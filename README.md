@@ -140,8 +140,9 @@ src
 ## Preloaded Component
 
 * [Mongo Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/mongo)
-* [Redis Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/redis) 
-* [New Reclic](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/newrelic-readme.md) 
+* [Redis Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/redis)
+* [Kafka Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/kafka) 
+* [New Relic](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/newrelic-readme.md) 
 
 
 ## Comments/issues

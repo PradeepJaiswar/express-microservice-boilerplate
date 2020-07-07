@@ -39,6 +39,7 @@
     "express-winston": "^3.2.0",
     "ioredis": "^4.17.3",
     "jsonwebtoken": "^8.5.1",
+    "kafka-node": "3.0.1",
     "mongoose": "^5.9.21",
     "newrelic": "^5.10.0",
     "node-uuid": "^1.4.8",
