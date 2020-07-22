@@ -33,6 +33,9 @@ Visit [http://localhost:8080/v1/default](http://localhost:8080/v1/default)
 Pug demo -  templating integration https://pugjs.org/api/getting-started.html  
 Visit [http://localhost:8080/v1/pug_demo](http://localhost:8080/v1/pug_demo)
 
+Mongo - Mongo for demo  
+Visit [http://localhost:8080/v1/mongo](http://localhost:8080/v1/mongo)
+
 ## Build
 
 `npm run build`
