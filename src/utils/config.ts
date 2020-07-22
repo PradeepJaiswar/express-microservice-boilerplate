@@ -1,7 +1,7 @@
-import getConfigFiles from "../../config";
+import appConfig from "../../config";
 
 import  constants from "./constants";
 
-const config = getConfigFiles(constants.ENV);
+const config = appConfig.getConfigFiles(constants.ENV);
 
 export default config;

@@ -1,12 +1,13 @@
 const HOST = process.env.HOST || "0.0.0.0";
 
 const environments = {
-    "prod" : "PRODUCTION",
-    "test" : "TEST",
-    "uat" : "UAT",
+    "prod" : "production",
+    "uat" : "uat",
+    "test" : "test",
+    "dev" : "dev",
 };
 
-const ENV = (process.env.ENV || process.env.NODE_ENV) || environments.test;
+const ENV = (process.env.ENV || process.env.NODE_ENV) || environments.dev;
 
 const PORT = process.env.PORT || 8080;
 
@@ -16,7 +17,8 @@ const SWITCHES  = {
 };
 
 const connections  = {
-    "DATA" : "DATA"
+    "DATA" : "DATA",
+    "MONGO" : "MONGO"
 };
 
 export default {
