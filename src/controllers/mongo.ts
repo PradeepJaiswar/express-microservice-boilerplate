@@ -6,8 +6,6 @@ const mongoController = async (req, res) => {
 
     const allUsers = await users.getInstance().getAllUsers();
 
-
-
     res.status(statusCode.OK_200).send(Response.success( allUsers, {
         "link" : "http://localhost:8080/v1/mongo_demo"
     }));

@@ -8,7 +8,7 @@ import * as Table from "cli-table";
 
 import allRouter from "../routes";
 import allInitializer from "./initializers";
-import middleware from "../middlewares";
+// import middleware from "../middlewares";
 import  { logger, constant } from "../utils";
 
 // initialise express app with tyboost - https://www.npmjs.com/package/tyboost
@@ -36,10 +36,10 @@ const registerCoreMiddleware = function (): void {
             logger.info(`BOOT :: Registered middleware : pug`);
         }
 
-        if (constant.ENV != constant.environments.prod) {
-            app.use(middleware.expressWinston);
-            logger.info(`BOOT :: Registered middleware : uuiexpressWinstond`);
-        }
+        // if (constant.ENV != constant.environments.prod) {
+        //     app.use(middleware.expressWinston);
+        //     logger.info(`BOOT :: Registered middleware : uuiexpressWinstond`);
+        // }
 
         logger.info(`BOOT :: Registering core middleware done`);
     } catch (err) {
