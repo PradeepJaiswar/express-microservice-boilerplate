@@ -1,10 +1,10 @@
 import  { Response, statusCode } from "../utils";
 
-import users from "../models/users";
+import Models from "../models";
 
 const mongoController = async (req, res) => {
 
-    const allUsers = await users.getInstance().getAllUsers();
+    const allUsers = await Models.Users.getInstance().getAllUsers();
 
     res.status(statusCode.OK_200).send(Response.success( allUsers, {
         "link" : "http://localhost:8080/v1/mongo_demo"

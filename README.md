@@ -34,7 +34,10 @@ Pug demo -  templating integration https://pugjs.org/api/getting-started.html
 Visit [http://localhost:8080/v1/pug_demo](http://localhost:8080/v1/pug_demo)
 
 Mongo - Mongo for demo  
-Visit [http://localhost:8080/v1/mongo](http://localhost:8080/v1/mongo_demo)
+Visit [http://localhost:8080/v1/mongo_demo](http://localhost:8080/v1/mongo_demo)
+
+Redis - Redis for demo
+Visit [http://localhost:8080/v1/redis_demo](http://localhost:8080/v1/redis_demo)
 
 ## Build
 
@@ -145,7 +148,9 @@ src
 * [Mongo Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/mongo)
 * [Redis Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/redis)
 * [Kafka Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/kafka) 
-* [New Relic](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/newrelic-readme.md) 
+* [New Relic](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/newrelic-readme.md)
+* [Jwt Token](https://github.com/PradeepJaiswar/express-microservice-boilerplate/blob/develop/src/utils/jwt-token.ts)
+
 
 
 ## Comments/issues
