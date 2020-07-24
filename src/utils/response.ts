@@ -9,9 +9,8 @@ class Response {
         const  successResponseObject: object = {};
 
         // add data
-        successResponseObject["data"] = {
-            ...data
-        };
+        successResponseObject["data"] = data;
+
         // add meta to response if provided
         if (meta && typeof meta === "object") {
             successResponseObject["meta"] = {

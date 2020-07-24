@@ -2,7 +2,11 @@ import services from "../services";
 
 import  { Response, statusCode } from "../utils";
 
-const defaultController = (req, res) => {
+import users from "../models/users";
+
+const defaultController = async (req, res) => {
+
+    console.log(await users.getInstance().getAllUsers());
     // call some service
     services.defaultService();
 
