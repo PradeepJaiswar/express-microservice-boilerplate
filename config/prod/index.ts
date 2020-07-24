@@ -1,3 +1,10 @@
 export default {
-    "key": "value"
+    databases: {
+        mongo: {
+            host: "",
+            port: "",
+            user_database: "",
+            user_collection: ""
+        }
+    }
 };

@@ -132,7 +132,7 @@ const startApp  = async (): Promise<void> => {
         // exit on uncaught exception
         handleError();
     } catch (err) {
-        logger.error(`BOOT :: Error while booting application from boot script : ${JSON.stringify(err.message)}`);
+        logger.error(`BOOT :: Error while booting application from boot script : ${JSON.stringify(err)}`);
         throw err;
     }
 };
