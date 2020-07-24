@@ -3,6 +3,6 @@ import controller from "../controllers";
 
 const router = express.Router();
 
-router.get("/v1/mongo", controller.mongoController);
+router.get("/v1/mongo_demo", controller.mongoController);
 
 export default router;
