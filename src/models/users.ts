@@ -1,7 +1,7 @@
 import { Connections, constant, config } from "../utils";
 import * as mongoose from "mongoose";
 
-class Users {
+export default class Users {
 
     public static Users;
     private usersModel;
@@ -44,5 +44,3 @@ class Users {
     }
 
 }
-
-export default Users;

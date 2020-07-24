@@ -16,10 +16,18 @@ const SWITCHES  = {
     "PUG" : true
 };
 
+const REDIS_SERVER_TYPE = {
+    REDIS: "REDIS",
+    REDIS_SENTINEL: "REDIS_SENTINEL",
+    REDIS_CLUSTER: "REDIS_CLUSTER"
+};
+
 const connections  = {
     "DATA" : "DATA",
-    "MONGO" : "MONGO"
+    "MONGO" : "MONGO",
+    "REDIS" : "REDIS"
 };
+
 
 export default {
     environments,
@@ -28,5 +36,6 @@ export default {
     SWITCHES,
     HOST,
     connections,
+    REDIS_SERVER_TYPE
 };
 
