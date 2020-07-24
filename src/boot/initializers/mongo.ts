@@ -1,3 +1,11 @@
+/*
+* On successful initialization invoke resolve
+* Resolve will trigger next initializer
+*
+* On fail initialization you can invoke reject
+* Reject will stop the booting up of express app. In case you don't want to stop booting process if initialization fails invoke resolve
+ */
+
 import { config, Connections, constant, logger, mongo } from "../../utils";
 
 const init = async function (): Promise<void> {

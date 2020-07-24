@@ -6,6 +6,7 @@ import  { Response, statusCode } from "./response";
 import Connections from "./connections";
 import jwt from "./jwt-token";
 import mongo from "./mongo";
+import redis from "./redis";
 
 export  {
     logger,
@@ -17,4 +18,5 @@ export  {
     Connections,
     jwt,
     mongo,
+    redis
 };
