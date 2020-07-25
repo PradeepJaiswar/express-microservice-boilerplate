@@ -1,4 +1,4 @@
-import { Connections, logger, constant } from "../../utils";
+import { Connections, logger, constants } from "../../utils";
 
 /*
 * On successful initialization invoke resolve
@@ -11,7 +11,7 @@ import { Connections, logger, constant } from "../../utils";
 const init = async function (): Promise<void> {
     try {
         // do your initialization here
-        Connections.set(constant.connections.DATA, () => {});
+        Connections.set(constants.CONNECTIONS.DATA, () => {});
     }  catch (err) {
         logger.error(`BOOT :: Error connecting to {data} : ${JSON.stringify(err.message)}`);
         throw  new Error(err.message);

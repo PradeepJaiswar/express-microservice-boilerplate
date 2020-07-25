@@ -1,4 +1,4 @@
-import { Connections, constant, config } from "../utils";
+import { Connections, constants, config } from "../utils";
 import * as mongoose from "mongoose";
 
 export default class Users {
@@ -21,7 +21,7 @@ export default class Users {
     }
 
     private setDbModel() {
-        const mongoConnection = Connections.get(constant.connections.MONGO);
+        const mongoConnection = Connections.get(constants.CONNECTIONS.MONGO);
         const Schema = mongoose.Schema;
         const bodDetailsSchema = new Schema({
             name: { type: String, required: true },
