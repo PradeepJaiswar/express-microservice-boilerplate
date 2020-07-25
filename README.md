@@ -1,8 +1,6 @@
 # Express Microservice Boilerplate
 
-An express-based bootstrapping module for building microservices with Node JS. The boilerplate comes with preloaded component
-
-We have been using this boilerplate for some time on production to run many of our node js microservices.
+An express-based bootstrapping module for building microservices with Node JS. The boilerplate comes with preloaded component. We have been using this boilerplate for some time on production to run many of our node js microservices.
 
 
 ## Preloaded Component
@@ -12,7 +10,6 @@ We have been using this boilerplate for some time on production to run many of o
 * [Kafka Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/kafka) 
 * [New Relic](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/newrelic-readme.md)
 * [Jwt Token](https://github.com/PradeepJaiswar/express-microservice-boilerplate/blob/develop/src/utils/jwt-token.ts)
-
 
 
 ### Prerequisites ###
@@ -46,7 +43,7 @@ Visit [http://localhost:8080/v1/pug_demo](http://localhost:8080/v1/pug_demo)
 Mongo - Mongo for demo  
 Visit [http://localhost:8080/v1/mongo_demo](http://localhost:8080/v1/mongo_demo)
 
-Redis - Redis for demo
+Redis - Redis for demo  
 Visit [http://localhost:8080/v1/redis_demo](http://localhost:8080/v1/redis_demo)
 
 ## Build
