@@ -1,10 +1,10 @@
 const HOST = process.env.HOST || "0.0.0.0";
 
 const environments = {
-    "prod" : "production",
-    "uat" : "uat",
-    "test" : "test",
     "dev" : "dev",
+    "test" : "test",
+    "stage" : "stage",
+    "prod" : "production",
 };
 
 const ENV = (process.env.ENV || process.env.NODE_ENV) || environments.dev;
@@ -27,7 +27,6 @@ const connections  = {
     "MONGO" : "MONGO",
     "REDIS" : "REDIS"
 };
-
 
 export default {
     environments,

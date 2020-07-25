@@ -4,14 +4,13 @@ import * as bodyParser from "body-parser";
 import * as cors from "cors";
 import * as listEndpoints from "express-list-endpoints";
 import * as Table from "cli-table";
-// const path = require("path");
 
 import allRouter from "../routes";
 import allInitializer from "./initializers";
-// import middleware from "../middlewares";
 import  { logger, constant } from "../utils";
 
 // initialise express app with tyboost - https://www.npmjs.com/package/tyboost
+logger.info(`BOOT :: App is starting with environment :: ${constant.ENV}`);
 logger.info(`BOOT :: Initialising express app with tyboost`);
 const app = tyboost(express());
 
@@ -35,11 +34,6 @@ const registerCoreMiddleware = function (): void {
             app.set("view engine", "pug");
             logger.info(`BOOT :: Registered middleware : pug`);
         }
-
-        // if (constant.ENV != constant.environments.prod) {
-        //     app.use(middleware.expressWinston);
-        //     logger.info(`BOOT :: Registered middleware : uuiexpressWinstond`);
-        // }
 
         logger.info(`BOOT :: Registering core middleware done`);
     } catch (err) {
