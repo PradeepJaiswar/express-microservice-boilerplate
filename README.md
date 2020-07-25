@@ -1,9 +1,19 @@
 # Express Microservice Boilerplate
 
-An express-based bootstrapping module for building microservices with Node JS. The boilerplate comes with [pre-loaded ready to use components](
-https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master#preloaded-component)     
+An express-based bootstrapping module for building microservices with Node JS. The boilerplate comes with preloaded component
 
 We have been using this boilerplate for some time on production to run many of our node js microservices.
+
+
+## Preloaded Component
+
+* [Mongo Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/mongo)
+* [Redis Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/redis)
+* [Kafka Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/kafka) 
+* [New Relic](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/newrelic-readme.md)
+* [Jwt Token](https://github.com/PradeepJaiswar/express-microservice-boilerplate/blob/develop/src/utils/jwt-token.ts)
+
+
 
 ### Prerequisites ###
 
@@ -142,16 +152,6 @@ src
 │     test-2
 │     ...
 ```
-
-## Preloaded Component
-
-* [Mongo Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/mongo)
-* [Redis Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/redis)
-* [Kafka Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/kafka) 
-* [New Relic](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/newrelic-readme.md)
-* [Jwt Token](https://github.com/PradeepJaiswar/express-microservice-boilerplate/blob/develop/src/utils/jwt-token.ts)
-
-
 
 ## Comments/issues
 
