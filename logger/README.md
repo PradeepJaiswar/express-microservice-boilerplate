@@ -43,7 +43,3 @@ For changing default value i advice to put this value in config file and read fr
       logfileMaxsize: 10485760,
       maxNoLogfile: 2,
     });
-
-## COMMENTS/ISSUES:
-
-F-f-fork it, baby.
