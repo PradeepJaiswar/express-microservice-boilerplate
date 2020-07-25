@@ -1,10 +1,10 @@
-import { Connections, constant } from "../utils";
+import { Connections, constants } from "../utils";
 
 export default class Data {
     private connection;
 
     constructor() {
-        this.connection = Connections.get(constant.connections.DATA);
+        this.connection = Connections.get(constants.CONNECTIONS.DATA);
     }
 
     public doSomething(): void {

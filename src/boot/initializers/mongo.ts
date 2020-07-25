@@ -6,7 +6,7 @@
 * Reject will stop the booting up of express app. In case you don't want to stop booting process if initialization fails invoke resolve
  */
 
-import { config, Connections, constant, logger, mongo } from "../../utils";
+import { config, Connections, constants, logger, mongo } from "../../utils";
 
 const init = async function (): Promise<void> {
     try {
@@ -17,7 +17,7 @@ const init = async function (): Promise<void> {
             "connectionLimit": 5
         });
 
-        Connections.set(constant.connections.MONGO, mongoClient);
+        Connections.set(constants.CONNECTIONS.MONGO, mongoClient);
         logger.info(`BOOT :: Connected Mongo at : ${JSON.stringify(config.databases.mongo.host)}, DB: ${config.databases.mongo.user_database}`);
 
     } catch (err) {

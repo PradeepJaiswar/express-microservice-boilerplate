@@ -1,20 +1,15 @@
 const HOST = process.env.HOST || "0.0.0.0";
 
-const environments = {
-    "prod" : "production",
-    "uat" : "uat",
-    "test" : "test",
+const ENVIRONMENTS = {
     "dev" : "dev",
+    "test" : "test",
+    "stage" : "stage",
+    "prod" : "production",
 };
 
-const ENV = (process.env.ENV || process.env.NODE_ENV) || environments.dev;
+const ENV = (process.env.ENV || process.env.NODE_ENV) || ENVIRONMENTS.dev;
 
 const PORT = process.env.PORT || 8080;
-
-const SWITCHES  = {
-    "NEW_RELIC": false,
-    "PUG" : true
-};
 
 const REDIS_SERVER_TYPE = {
     REDIS: "REDIS",
@@ -22,20 +17,18 @@ const REDIS_SERVER_TYPE = {
     REDIS_CLUSTER: "REDIS_CLUSTER"
 };
 
-const connections  = {
+const CONNECTIONS  = {
     "DATA" : "DATA",
     "MONGO" : "MONGO",
     "REDIS" : "REDIS"
 };
 
-
 export default {
-    environments,
+    ENVIRONMENTS,
     ENV,
     PORT,
-    SWITCHES,
     HOST,
-    connections,
+    CONNECTIONS,
     REDIS_SERVER_TYPE
 };
 

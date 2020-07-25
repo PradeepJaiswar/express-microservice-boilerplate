@@ -2,11 +2,11 @@
 
 ### Enable
 
-To enable New Relic go to src/uti;/constant and enable switch
+To enable New Relic go to config/your/environment and enable switch
 
-    const SWITCHES  = {
-        "NEW_RELIC": true,
-    };
+    {
+        "new_relic": true,
+    }
 
 ### License Key
 

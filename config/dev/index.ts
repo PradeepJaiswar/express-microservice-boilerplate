@@ -1,4 +1,8 @@
 export default {
+    switches : {
+        new_relic : false,
+        pug : false,
+    },
     databases: {
         mongo: {
             host: "127.0.0.1",
@@ -11,5 +15,6 @@ export default {
             port: "6379",
             user_database: 3,
         }
-    }
+    },
+
 };

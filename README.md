@@ -80,8 +80,6 @@ Run `docker-compose -f docker-compose.test.yml up -d`
 
 Build & Run `docker-compose -f docker-compose.test.yml up --build -d`
 
-Visit [http://localhost:8080/](http://localhost:8080/)
-
 #### UAT
 
 Build `docker-compose -f docker-compose.uat.yml build`
