@@ -1,4 +1,8 @@
 export default {
+    switches : {
+        new_relic : false,
+        pug : false,
+    },
     databases: {
         mongo: {
             host: "",

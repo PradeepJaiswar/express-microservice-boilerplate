@@ -7,7 +7,7 @@ import * as Table from "cli-table";
 
 import allRouter from "../routes";
 import allInitializer from "./initializers";
-import  { logger, constants } from "../utils";
+import  { logger, constants, config } from "../utils";
 
 // initialise express app with tyboost - https://www.npmjs.com/package/tyboost
 logger.info(`BOOT :: App is starting with environment :: ${constants.ENV}`);
@@ -28,7 +28,7 @@ const registerCoreMiddleware = function (): void {
         logger.info(`BOOT :: Registered middleware : cors(*)`);
 
         // Enable in case of the pug switch is on
-        if (constants.SWITCHES && constants.SWITCHES.PUG) {
+        if (config.switches && config.switches.pug) {
             // you can change pug views folder path here
             // app.set("views", path.join(`${__dirname}`, "views"));
             app.set("view engine", "pug");

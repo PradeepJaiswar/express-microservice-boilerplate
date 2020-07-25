@@ -11,11 +11,6 @@ const ENV = (process.env.ENV || process.env.NODE_ENV) || ENVIRONMENTS.dev;
 
 const PORT = process.env.PORT || 8080;
 
-const SWITCHES  = {
-    "NEW_RELIC": false,
-    "PUG" : true
-};
-
 const REDIS_SERVER_TYPE = {
     REDIS: "REDIS",
     REDIS_SENTINEL: "REDIS_SENTINEL",
@@ -32,7 +27,6 @@ export default {
     ENVIRONMENTS,
     ENV,
     PORT,
-    SWITCHES,
     HOST,
     CONNECTIONS,
     REDIS_SERVER_TYPE
