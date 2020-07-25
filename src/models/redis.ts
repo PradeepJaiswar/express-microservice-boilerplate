@@ -1,10 +1,10 @@
-import { Connections, constant } from "../utils";
+import { Connections, constants } from "../utils";
 
 export default class Redis {
     private redis;
 
     constructor() {
-        this.redis = Connections.get(constant.connections.REDIS);
+        this.redis = Connections.get(constants.CONNECTIONS.REDIS);
     }
 
     public set(key: string, value: string) {

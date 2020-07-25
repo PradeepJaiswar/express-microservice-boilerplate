@@ -4,14 +4,13 @@ import * as bodyParser from "body-parser";
 import * as cors from "cors";
 import * as listEndpoints from "express-list-endpoints";
 import * as Table from "cli-table";
-// const path = require("path");
 
 import allRouter from "../routes";
 import allInitializer from "./initializers";
-// import middleware from "../middlewares";
-import  { logger, constant } from "../utils";
+import  { logger, constants, config } from "../utils";
 
 // initialise express app with tyboost - https://www.npmjs.com/package/tyboost
+logger.info(`BOOT :: App is starting with environment :: ${constants.ENV}`);
 logger.info(`BOOT :: Initialising express app with tyboost`);
 const app = tyboost(express());
 
@@ -29,17 +28,12 @@ const registerCoreMiddleware = function (): void {
         logger.info(`BOOT :: Registered middleware : cors(*)`);
 
         // Enable in case of the pug switch is on
-        if (constant.SWITCHES && constant.SWITCHES.PUG) {
+        if (config.switches && config.switches.pug) {
             // you can change pug views folder path here
             // app.set("views", path.join(`${__dirname}`, "views"));
             app.set("view engine", "pug");
             logger.info(`BOOT :: Registered middleware : pug`);
         }
-
-        // if (constant.ENV != constant.environments.prod) {
-        //     app.use(middleware.expressWinston);
-        //     logger.info(`BOOT :: Registered middleware : uuiexpressWinstond`);
-        // }
 
         logger.info(`BOOT :: Registering core middleware done`);
     } catch (err) {
@@ -107,18 +101,18 @@ const startApp  = async (): Promise<void> => {
         await app.boot();
         logger.info(`BOOT :: Booting application done`);
 
-        app.listen(constant.PORT, constant.HOST) .on("error", (error: any) => {
+        app.listen(constants.PORT, constants.HOST) .on("error", (error: any) => {
             if (error.syscall !== "listen") {
                 throw error;
             }
             // handle specific listen errors with friendly messages
             switch (error.code) {
                 case "EACCES":
-                    logger.error(`BOOT :: ${constant.HOST}:${constant.PORT} requires elevated privileges`);
+                    logger.error(`BOOT :: ${constants.HOST}:${constants.PORT} requires elevated privileges`);
                     process.exit(1);
                     break;
                 case "EADDRINUSE":
-                    logger.error(`BOOT :: ${constant.HOST}:${constant.PORT} is already in use`);
+                    logger.error(`BOOT :: ${constants.HOST}:${constants.PORT} is already in use`);
                     process.exit(1);
                     break;
                 default:
@@ -126,7 +120,7 @@ const startApp  = async (): Promise<void> => {
             }
         })
             .on("listening", () => {
-                logger.info(`BOOT :: <> <> <> <> <> <> <> <> <> <> Listening on ${constant.HOST}:${constant.PORT} <> <> <> <> <> <> <> <> <> <>`);
+                logger.info(`BOOT :: <> <> <> <> <> <> <> <> <> <> Listening on ${constants.HOST}:${constants.PORT} <> <> <> <> <> <> <> <> <> <>`);
             });
 
         // exit on uncaught exception

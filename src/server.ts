@@ -1,10 +1,10 @@
 "use strict";
 
 import startApp from "./boot";
-import  { constant, logger } from "./utils";
+import  { constants, logger, config } from "./utils";
 
 // Enable newrelic if switch is on
-if (constant.SWITCHES.NEW_RELIC && constant.ENV === constant.environments.prod) {
+if (config.switches.new_relic && constants.ENV === constants.ENVIRONMENTS.prod) {
   require("newrelic");
 }
 

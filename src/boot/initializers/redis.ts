@@ -6,15 +6,15 @@
 * Reject will stop the booting up of express app. In case you don't want to stop booting process if initialization fails invoke resolve
  */
 
-import { config, Connections, constant, logger, redis } from "../../utils";
+import { config, Connections, constants, logger, redis } from "../../utils";
 
 const init = async function (): Promise<void> {
     try {
         logger.info(`BOOT :: Connecting redis at : ${JSON.stringify(config.databases.redis.host)}`);
-        const redisClient = await redis.initialize(constant.REDIS_SERVER_TYPE.REDIS, {
+        const redisClient = await redis.initialize(constants.REDIS_SERVER_TYPE.REDIS, {
             host: config.databases.redis.host
         });
-        Connections.set(constant.connections.REDIS, redisClient);
+        Connections.set(constants.CONNECTIONS.REDIS, redisClient);
         logger.info(`BOOT :: Connected redis at : ${JSON.stringify(config.databases.redis.host)}`);
     }  catch (err) {
         logger.error(`BOOT :: Error connecting to redis server at ${config.databases.redis.host} :: message: ${err.message} :: stack : ${err.stack}`);
