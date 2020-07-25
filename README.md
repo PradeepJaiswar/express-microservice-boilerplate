@@ -1,10 +1,11 @@
 # Express Microservice Boilerplate
 
-An express-based bootstrapping module for building microservices with Node JS. The boilerplate comes with preloaded component. We have been using this boilerplate for some time on production to run many of our node js microservices.
+An express-based bootstrapping module for building microservices with Node JS. The boilerplate comes with preloaded components to get you started quickly to focus business logic code. We have been using this boilerplate for some time on production to run many of our node js microservices.
 
 
 ## Preloaded Component
 
+* [Winston Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/logger)
 * [Mongo Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/mongo)
 * [Redis Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/redis)
 * [Kafka Module](https://github.com/PradeepJaiswar/express-microservice-boilerplate/tree/master/kafka) 
