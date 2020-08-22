@@ -53,50 +53,6 @@ Visit [http://localhost:8080/v1/redis_demo](http://localhost:8080/v1/redis_demo)
 
 Uses Gulp [Gulp](https://gulpjs.com/) for TypeScript build
 
-## Docker
-#### Prerequisite: Install docker
-* Ubuntu docker :: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
-* Ubuntu :: docker-compose : https://linuxize.com/post/how-to-install-and-use-docker-compose-on-ubuntu-18-04
-* Mac :: https://docs.docker.com/docker-for-mac/install/
-* Windows :: https://docs.docker.com/v17.09/docker-for-windows/install/
-
-Note : don't run docker with sudo
-
-### Build and Run
-
-#### Local Development
-
-Build `docker-compose -f docker-compose.dev.yml build`
-
-Run `docker-compose -f docker-compose.dev.yml up --build`
-
-Build & Run `docker-compose -f docker-compose.dev.yml up --build`
-
-#### Test
-
-Build `docker-compose -f docker-compose.test.yml build`
-
-Run `docker-compose -f docker-compose.test.yml up -d`
-
-Build & Run `docker-compose -f docker-compose.test.yml up --build -d`
-
-#### UAT
-
-Build `docker-compose -f docker-compose.uat.yml build`
-
-Run `docker-compose -f docker-compose.uat.yml up -d`
-
-Build & Run `docker-compose -f docker-compose.uat.yml up --build -d`
-
-#### PRODUCTION
-
-Build `docker-compose -f docker-compose.prod.yml build`
-
-Run `docker-compose -f docker-compose.prod.yml up -d`
-
-Build & Run `docker-compose -f docker-compose.prod.yml up --build -d`
-
-
 #### FOLDER STRUCTURE
 
 ```
